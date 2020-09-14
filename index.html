@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="iso-8559-1"/>
-   <meta name="description" content="Pagina web de un proyecto de curso html 5"/>
-   <meta name="keywords" content="hmtl5, css3, javascript, analisis, diseño, algoritmos, san marcos, curso, proyecto, tarea "/>
-   <title>Animación del algoritmo "Binary search"</title>	
+	<head>
+		
+		<title>
+			Proyecto Diseno de Algoritmos  
+		</title>
+		
+		<!-- css de cómo se presenta la página -->
+		
+		<link rel="stylesheet" href="visualizationPageStyle.css">
+			
+			
+		<!-- Solo se usa para el control deslizante de velocidad de animación. -->
+		<link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">				
+		<script src="ThirdParty/jquery-1.5.2.min.js"></script>
+		<script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+				
+		<!-- Javascript para visualizar el codigo -->
+		<script type = "text/javascript" src = "AnimationLibrary/CustomEvents.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/UndoFunctions.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimatedObject.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimatedLabel.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimatedCircle.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimatedRectangle.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimatedLinkedList.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/HighlightCircle.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/Line.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/ObjectManager.js"> </script>
+		<script type = "text/javascript" src = "AnimationLibrary/AnimationMain.js"> </script>
+		<script type = "text/javascript" src = "AlgorithmLibrary/Algorithm.js"> </script>
+		<script type = "text/javascript" src = "AlgorithmLibrary/Search.js"> </script> 
+				
+			
+	 </head> 
+	
+	<body onload="init();" class="VisualizationMainPage">
+		
+		<div id = "container">
+			
+			<div id="header"> 
+				<img src="Imagenes/escudo1.png" wind="100" height="75">
+				<img src="Imagenes/log.png" wind="400" height="75">
+				<img src="Imagenes/integrantes.png" wind="100" height="75">
+			
+			</div>
+			
+			<div = id = "mainContent"> 
+				
+				<div id = "algoControlSection">
+					<!-- Tabla de botones para controlar animaciones específicas (insert/find/etc) -->
+					<!-- (rellenado con código javascript específico de la animación) -->
+					<table id="AlgorithmSpecificControls"> </table> 
+				</div>
+				
+					<!-- Lienzo de dibujo donde se realiza toda la animación. Nota: se puede cambiar el tamaño en el código -->
+									
+				<canvas id="canvas" width="1500" height="400"></canvas> <!-- Espacio donde esta la grafica -->
+				
+				<div id = "generalAnimationControlSection">
+					<!-- Tabla de botones inferior -->
 
-</head>
-<body>
-   <header>
-	<h1>Proyecto - ADA</h1>
-   </header>
-   <nav>
-	<ul>
-	   <li>Binary search</li>
-	   <li><a href="linearSearch.html">Linear Search</a></li>
-	   <li><a href="QuickSelect.html">Quick Select</a></li>
-	</ul>
-   </nav>
-   <section>
-	<h3>Binary search</h3>
-   	<h4>N° de entradas:</h4>
-	<p>Numero máximo de entradas es 100, las entradas son aleatorias<p>
-	<form>
-	   <input type="number">
-	</form>
-   	<h4>N° a buscar:</h4>
-	<form>
-	   <input type="number">
-	</form>
-   	<h4>Tiempo de demora:</h4>
-   </section>
-   <footer>
-	<h4>Integrantes:</h4>
-	<p>Atuncar Ayllon Christoper Marcelo<p>
-	<p>Alegria Jimenez Jose Gonzalo <p>
-	<p>Integrante 3<p>
-   </footer>	
-</body>
+					<table id="GeneralAnimationControls">  </table>		
+				</div>
+				
+			</div> <!-- mainContent -->
+			
+			<div id="footer">  
+				<p><a>Gracias por todo</a></p>
+			</div>
+
+		</div><!-- container -->
+	</body>
 </html>
